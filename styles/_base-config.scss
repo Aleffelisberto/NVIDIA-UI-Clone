@@ -1,0 +1,32 @@
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  max-width: $max-width-content;
+  margin: 0 auto;
+}
+
+// overlaying main content with an translucid black background (appears if menu has beem opened)
+.overlay {
+  opacity: 0;
+  visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+
+  transition: opacity 0.2s;
+
+  cursor: pointer;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}

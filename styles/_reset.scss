@@ -1,0 +1,25 @@
+@import 'font-config';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*, button, input {
+  font-family: DINPro, Arial, Helvetica, sans-serif;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}

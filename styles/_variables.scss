@@ -1,0 +1,27 @@
+// COLORS
+$primary-green: #76b900;
+$black: #000000;
+$white: #fff;
+$grey: #474747;
+
+// SIZES
+// general
+$max-width-content: 1280px;
+
+// navbar
+$navbar-height: 50px;
+
+//mixins
+@mixin hideElement ($displayNone) {
+  visibility: hidden;
+  opacity: 0;
+  @if $displayNone == true {
+    display: none;
+  }
+}
+
+@mixin showElement ($display) {
+  visibility: visible;
+  opacity: 1;
+  display: $display;
+}

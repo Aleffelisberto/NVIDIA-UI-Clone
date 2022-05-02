@@ -1,0 +1,134 @@
+nav.navbar {
+  background: $white;
+  color: $grey;
+
+  position: relative;
+
+  max-width: $max-width-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  height: $navbar-height;
+
+  z-index: 200;
+
+  // toggle icons
+  .toggle {
+    cursor: pointer;
+    width: max-content;
+    font-size: 1.1em;
+  }
+
+  .icon-close {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+  }
+
+  // nav menu
+  .menu {
+    opacity: 0;
+    visibility: hidden;
+    background: inherit;
+
+    display: block;
+    width: 100%;
+    max-width: 630px;
+    position: absolute;
+    top: $navbar-height;
+    left: -630px;
+    padding: 0 16px;
+
+    transition-delay: 0.1s;
+    transition-property: left;
+    transition-duration: 0.7s;
+
+    a {
+      color: $grey;
+      transition: color 0.3s;
+    }
+
+    ul {
+      font-size: 16px;
+
+      li {
+        padding: 16px 0;
+        display: flex;
+        justify-content: space-between;
+
+        cursor: pointer;
+
+        button {
+          font-size: 1.1em;
+          color: lighten($grey, 30);
+          transition: color 0.3s;
+        }
+
+        &:hover {
+          a {
+            color: $black;
+          }
+
+          button {
+            color: $black;
+          }
+        }
+      }
+    }
+
+    .side-links {
+      display: flex;
+      flex-direction: column;
+
+      a {
+        padding: 16px 0;
+        text-transform: uppercase;
+      }
+
+      a:hover {
+        color: $black;
+      }
+    }
+  }
+
+  &.show {
+    .icon-menu {
+      opacity: 0;
+      visibility: hidden;
+      display: none;
+    }
+
+    .icon-close {
+      visibility: visible;
+      opacity: 1;
+      display: block;
+    }
+
+    .menu {
+      opacity: 1;
+      visibility: visible;
+
+      height: 100vh;
+      padding: 0 16px;
+      left: 0;
+    }
+  }
+
+  // brand logo
+  h1 {
+    a {
+      img{
+        &.brand {
+          width: 100px;
+        }
+      }
+    }
+  }
+
+  .icon-profile {
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+}
