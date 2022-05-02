@@ -4,10 +4,10 @@
 
 ## Techs
 
-[x] HTML5
-[x] CSS3
-[x] Sass
-[x] JavaScript
+- [x] HTML5
+- [x] CSS3
+- [x] Sass
+- [x] JavaScript
 
 ## Usage
 
